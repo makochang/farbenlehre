@@ -8,7 +8,7 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       UnityLoader.SystemInfo.mobile = false;
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/colorgame.json");
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/colorgame.json", {onProgress: UnityProgress});
     </script>
     </head>
     <body style="margin: 0;padding: 0;">
