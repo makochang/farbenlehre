@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
-    <title>Unity WebGL Player | ColorGame</title>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unity WebGL Player | ColorGame</title>
+<script src="Build/UnityLoader.js"></script>
+<script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/colorgame.json");
     </script>
-    </head>
-    <body style="margin: 0;padding: 0;">
-		<p>4</p>
-		<div id="gameContainer" style="width:320px; height:320px"></div>
-		<p>最初にメッセージが表示されたらOKボタンを押してね。</p>
+<style>
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+}
+div {
+	height: 100%;
+	background: #bbddff;
+}
+</style>
+</head>
+<body>
+<p>6</p>
+<div id="gameContainer"></div>
+<p>最初にメッセージが表示されたらOKボタンを押してね。</p>
 </body>
 </html>
