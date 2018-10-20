@@ -1,0 +1,13 @@
+{
+    "name": "space_32shooter",
+    "main": "main.js",
+    "productName": "Space shooter",
+    "description": "Space shooter",
+    "author": "",
+    "version": "1.0.0",
+    "dependencies": {},
+    "devDependencies": {
+      "electron": "2.0.7"
+    }
+  }
+  
