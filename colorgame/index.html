@@ -2,29 +2,57 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Unity WebGL Player | ColorGame</title>
-<script src="Build/UnityLoader.js"></script>
-<script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/colorgame.json");
-    </script>
-<style>
-html {
-	height: 100%;
-}
-body {
-	height: 100%;
-	margin: 0;
-}
-div {
-	height: 100%;
-	background: #bbddff;
+<style type="text/css">
+canvas {
+  position:fixed;
+  top:0px;
+  left:0px;
+  margin:0;
+  padding:0;
+  z-index:-1; /* Forces canvas to background */
+	display: block;
+	margin: 0 auto;
 }
 </style>
 </head>
+
 <body>
-<p>最初に<a href="../gd/app/index.html">メッセージ</a>が表示されたらOKボタンを押してね。</p>
-<div id="gameContainer"></div>
+<canvas id="myCanvas" width="200" height="200" style="border: 1px solid #999;"></canvas>
+<script type="application/javascript" language="javascript">
+	
+	var cvs=document.getElementById("myCanvas");
+	var ctx=cvs.getContext("2d");
+	
+	ctx.beginPath();
+	ctx.fillStyle="green";
+	ctx.fillRect(0,0,100,100);
+	
+	ctx.beginPath();
+	ctx.lineWidth="5";
+	ctx.arc(100,100,50,0,2*Math.PI,true);
+	ctx.stroke();
+	
+	ctx.beginPath();
+	ctx.lineWidth="8";
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,200);
+	ctx.stroke();
+	
+	function resize() {
+	// Our canvas must cover full height of screen
+	// regardless of the resolution
+	var height = window.innerHeight;
+	
+	// So we need to calculate the proper scaled width
+	// that should work well with every resolution
+	var ratio = cvs.width/cvs.height;
+	var width = height * ratio;
+	
+	cvs.style.width = width+'px';
+	cvs.style.height = height+'px';
+	}
+	
+	resize();
+</script>
 </body>
 </html>
