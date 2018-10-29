@@ -10,3 +10,16 @@ dd{
 dd img{
 	display: inline-block;
 }
+
+table.h_line{
+	border: 1px solid #000;
+	border-collapse: collapse;
+}
+
+table.h_line tr{
+	border: 1px solid #CCC;
+}
+
+table.h_line td{
+	padding: 0.5em;
+}
