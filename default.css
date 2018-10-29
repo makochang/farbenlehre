@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+dt{font-weight: bold;}
+dd{
+	margin: 1em 0em 2em 1em;
+	padding: 0px;
+	display: inline-block;
+	vertical-align: top;
+}
+dd img{
+	display: inline-block;
+}
