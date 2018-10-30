@@ -14,6 +14,7 @@ dd img{
 table.h_line{
 	border: 1px solid #000;
 	border-collapse: collapse;
+	width:100%;
 }
 
 table.h_line tr{
